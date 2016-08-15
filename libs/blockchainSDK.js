@@ -31,7 +31,7 @@ var caURL = null;
 var users = null;
 var registrar = null; //user used to register other users and deploy chaincode
 var peerHosts = [];
-
+var WebAppAdmin;
 //hard-coded the peers and CA addresses.
 //added for reading configs from file
 try {
@@ -128,10 +128,19 @@ if (fs.existsSync("us.blockchain.ibm.com.cert")) {
             // the one time password hard coded inside the membersrvc.yaml.
             WebAppAdmin.enroll(pwd, function (err, crypto) {
                 if (err) return console.log('Error: failed to enroll user: %s', err);
-                console.log('enrolling user \'%s\' with secret \'%s\' as registrar...', "WebAppAdmin", pwd);
                 console.log('successfully enrolled user \'%s\'!', "WebAppAdmin");
-                chain.setRegistrar(WebAppAdmin);
+                path = chain.getKeyValStore().dir + "/member." + WebAppAdmin.getName();
+                registrar = WebAppAdmin;
+                fs.exists(path, function (exists) {
+                    if (exists) {
+                        console.log("Successfully stored client token for" + " ---> " + WebAppAdmin.getName());
+                    } else {
+                        console.log("Failed to store client token for " + WebAppAdmin.getName() + " ---> " + err);
+                    }
+                });
 
+                chain.setRegistrar(WebAppAdmin);
+                console.log('enrolling user \'%s\' with secret \'%s\' as registrar...', "WebAppAdmin", pwd);
                 exports.deploy('/', ['ready!'], function (chaincodeID) {
                     user_manager.setup(chaincodeID, chain, cb_deployed);
                 });
