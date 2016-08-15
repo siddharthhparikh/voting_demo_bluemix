@@ -1,0 +1,20 @@
+extends layout
+block content
+  script(src='/javascripts/voting.js')
+  script(src='https://code.highcharts.com/highcharts.js')
+  link(rel='stylesheet', href='/stylesheets/topic.css')
+  #header
+    h1(id='title')= title   
+    h1(class='vote-header' id='remaining-votes')
+    h1(class='vote-header') Remaining Votes:
+  #content-header
+    h1(id='topic-description' )=topicName
+    p(id='topicID' class='hidden')=topicID
+  #content-block
+    #table
+      table(id='candidates')
+        th Candidate
+        th Votes
+    button(class='button' id='submit') Submit
+
+    

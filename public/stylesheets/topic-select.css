@@ -1,0 +1,182 @@
+#content-header {
+  display: inline-block;
+}
+
+/* Special button size for topics */
+
+#content-block .button {
+  height: 100px;
+  word-wrap: normal;
+}
+
+/* New topic info-box content styling */
+
+#topic-input {
+  height: 75%;
+  overflow-y: auto;
+}
+
+#create-header {
+  margin: 0px 0px 30px 0px;
+  font-size: 28px;
+  line-height: 30px;
+  text-decoration: underline;
+}
+
+.form-label {
+  margin: 5px 5px 5px 15px;
+  text-align: left;
+}
+
+#topic-submit {
+  margin-top: 25px;
+}
+
+.user-info-header {
+  text-decoration: underline;
+}
+
+/* User welcome message */
+
+.welcome {
+  margin: 22px 0px 0px;
+  margin-left: 2%;
+  display: inline-block;
+}
+
+/* Header-icons */
+
+.header-icons {
+  display: inline-block;
+  font-size: 48px;
+  margin: 12px 3px 0px 3px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.header-icons:hover{
+  color: #F7F7F7;
+}
+
+.header-icons:active{
+  color: #313131;
+}
+
+#expire {
+  display: inline-block;
+  text-align: center;
+}
+
+.expire {
+  width: 60px;
+  margin: 5px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #F7F7F7;
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.22);
+  font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+  font-size: 22px;
+  text-align: center;
+}
+
+.expire::-webkit-input-placeholder {
+  overflow: visible;
+}
+
+/* Add/Remove Candidate buttons */
+
+#add-cand {
+  font-size: 30px;
+  color: #313131;
+}
+
+#add-cand:hover{
+  cursor: pointer;
+  border-bottom: 1px solid #313131;
+}
+
+#add-cand:active{
+  cursor: pointer;
+  background-color: #313131;
+  color: #F7F7F7;
+  border: none;
+}
+
+.delete-candidate {
+  margin-left: -25px;
+  font-size: 24px;
+  color: #313131;
+}
+
+.delete-candidate:hover{
+  color: #C20900;
+  cursor: pointer;
+}
+
+/* User Setting buttons */
+
+#logout {
+  margin-top: 15px;
+}
+
+#loading-msg {
+  margin: 0px;
+}
+
+#request-upgrade {
+  margin-top: 15px;
+}
+
+#upgrade-help:active {
+  color: #141414;
+  cursor: pointer;
+}
+
+/* Open/Closed topic styling */
+
+.inactive {
+  font-size: 15px; 
+  cursor: pointer; 
+}
+
+.active {
+  font-size: 30px;
+}
+
+/* Styling for voted topics */
+
+.voted {
+  background-color: #ACACAC;
+}
+
+.voted:hover {
+  color: #313131;
+  background-color: #ACACAC;
+}
+
+.tooltip {
+  font-size: 16px;
+  visibility: hidden;
+  color: #F7F7F7;
+  margin-top: -5px;
+}
+
+/* Show the tooltip text when you mouse over a header button */
+#open-user-info:hover #account-tooltip {
+  visibility: visible;
+}
+
+#refresh-topics:hover #refresh-tooltip {
+  visibility: visible;
+}
+
+#new-topic:hover #create-tooltip {
+  visibility: visible;
+}
+
+#manage-users:hover #manage-tooltip {
+  visibility: visible;
+}
+

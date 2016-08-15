@@ -1,0 +1,77 @@
+
+/* General style sheet for all Chain Vote pages */
+
+/* Background image and font */
+body {
+  background-image: url('/images/background.png');
+  text-align: center;
+  min-width: 640px;
+  margin: 0px;
+  font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+}
+
+
+h1 {
+  font-size: 26px;
+}
+
+/* Top header bar */
+
+#header {
+  width: 100%;
+  height: 75px;
+  margin: 0px;
+  background-color: #00C26A;
+  color: #005C34;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: right;
+}
+
+/* Chain Vote title */
+
+#title {
+  float: left;
+  margin-left: 50px;
+  font-size: 32px;
+}
+
+#title:hover {
+  color: #F7F7F7;
+  cursor: pointer;
+}
+
+#title:active {
+  color: #313131;
+  cursor: pointer;
+}
+
+/* Header for page content */
+
+#content-header {
+  width: 30%;
+  height: auto;
+
+  margin: 5% auto 0px auto;
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid #313131;
+  color: #313131;
+}
+
+#content-header > h1 {
+  margin: auto;
+  display: inline-block;
+  padding: 0px 10px 0px 10px;
+}
+
+
+
+/* Styling for main page content */
+
+#content-block {
+  width: 40%;
+  height: 400px;
+  margin: 10px auto 0px auto;
+  padding-top: 10px;
+  border-radius: 10px;
+}

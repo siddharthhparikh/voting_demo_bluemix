@@ -1,0 +1,71 @@
+extends layout
+block content
+  //
+    Main viewing pages for Chain Vote displays all voting topics for users to vote on.
+    Also allows contains topic creation and account settings/details.
+  script(src='/javascripts/topic-select-page.js')
+  link(rel='stylesheet', href='/stylesheets/loader.css')
+  link(rel='stylesheet' href='//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css')
+  link(rel='stylesheet', href='/stylesheets/info-box.css')
+  link(rel='stylesheet', href='/stylesheets/button.css')
+  link(rel='stylesheet', href='/stylesheets/topic-select.css')
+  //
+    Green title bar. Also contains several action buttons which activate info-box divs
+  #header
+    h1(id='title')= title
+    i(class='material-icons header-icons' id='refresh-topics') refresh 
+      p(id='refresh-tooltip' class='tooltip') Refresh Topics
+    i(class='material-icons md-48 header-icons hidden' id='new-topic') playlist_add
+      p(id='create-tooltip' class='tooltip') Create Topic
+    i(class='material-icons header-icons hidden' id='manage-users') verified_user
+      p(id='manage-tooltip' class='tooltip') Manage Users
+    i(class='material-icons md-48 header-icons' id='open-user-info') account_circle
+      p(id='account-tooltip' class='tooltip') Account Info
+  //
+    Main content block. Master content encompases whole screen while content block displays actual content.
+    Master content is used to handel click events with info-box divs.
+  #master-content
+    #content-header
+      h1(id='open-topics' class='active') Open Topics
+      h1(id='closed-topics' class='inactive') Closed Topics  
+    #content-block 
+      #topics
+  //
+    Info-box div for topic creation. Contains several input forms for user.
+  #topic-creation(class='info-box hidden')
+    h1(id='create-header') Create a Topic
+    #topic-input
+      p(class='form-label') Vote Description:
+      input(type='text' class='topic-input' id='topic-name' placeholder='Topic Description')
+      p(class='form-label') Topic Life Span: 
+      #expire
+        input(type='number' id='days' class='topic-input expire' min='0' placeholder='Days')
+        input(type='number' id='hours' class='topic-input expire' min='0' placeholder='Hours')
+        input(type='number' id='min' class='topic-input expire' min='0' placeholder='Min')
+      p(class='form-label') Candidates:
+      div(class='candidate-div')
+        input(type='text' class='topic-input topic-candidate' placeholder='Candidate')
+      div(class='candidate-div')
+        input(type='text' class='topic-input topic-candidate' placeholder='Candidate')
+      #candidate-append
+      i(class='material-icons' id='add-cand') add
+    input(type='submit' class='button' id='topic-submit' value='Submit')
+  //
+    Info-box div for user details/settings
+  #user-info(class='info-box hidden')
+    h1(class='user-info-header') My Account
+    h1 You are logged in as:
+    p(class='user-info' id='username')
+    p
+    h1 Available votes per topic: 
+    p(class='user-info' id='user-votes') 5
+    p
+    button(class='button' id='request-upgrade') Request Upgrade
+    p
+    form(action='/logout' method='get')
+      input(type='submit' class='button' id='logout' value='Logout')
+
+ 
+  
+
+  

@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/info-box.css')
+  link(rel='stylesheet', href='/stylesheets/loader.css')
+  link(rel='stylesheet', href='/stylesheets/login.css')
+  script(src='/javascripts/login.js')
+  // 
+    Div for green title bar.
+  #header
+    h1(id='title')= title
+    h1(id='open-register' class='hidden') Register  
+  // 
+    Header for content box
+  #content-header(class='hidden')
+    h1( id='login') Login:
+  //
+    Main content block. Master content encompases whole screen while content block displays actual content.
+    Master content is used to handel click events with info-box divs.
+  #master-content
+    #content-block(class='hidden')
+      input(type='text' placeholder='Email' id='username')
+      input(type='password' placeholder='Password' id='password')
+      p
+      input(type='submit' class='button' id='submit' value='Submit')
+      p(id='error-msg')
+  //
+    Info box for registering user. Displays after user clicks the open-register element in the header.
+  #register-box(class='info-box' class='hidden')
+    p Full Name: 
+    input(type='text' class='registration-info' id='name' placeholder='First Last')
+    p Email address: 
+    input(type='text' class='registration-info' id='email' placeholder='Email')
+    p Organization: 
+    input(type='text' class='registration-info' id='organization' placeholder='Organization')
+    p Requested user type:
+    select(id='priv-type')
+      option(value='default') Default
+      option(value='creator') Creator
+      option(value='manager') Manager
+    button(class='button' id='register-user') Submit 
+  //
+    Loading splash screen is displayed until chaincode is finished loading. Div is removed after.
+  #loading-screen
+    p(class='loading-msg') Loading Blockchains
+    #loader
+    p(class='loading-msg') Please wait...
+
+
+  

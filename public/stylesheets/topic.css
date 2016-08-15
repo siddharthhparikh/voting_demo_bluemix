@@ -1,0 +1,60 @@
+/* Remaining votes display on header bar */
+
+#remaining-votes {
+  margin-right: 50px;
+  margin-left: 5px;
+}
+
+/* Vote topic title */
+
+.vote-header {
+  float: right;
+  color: #005C34;
+  font-size: 32px;
+}
+
+/* Styling for the table backdrop */
+
+#table {
+  width: 80%;
+  height: 550px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 50px auto 0px auto;
+  border-radius: 15px;
+  padding: 10px;
+  overflow: auto;
+}
+
+/* Styling for vote table. */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+    height: 56px;
+}
+
+td {
+  font-size: 32px;
+}
+
+.votes {
+  width: 50px;
+  height: 45px;
+  margin: -50px 0px 0px 10px;
+  padding-left: 5px;
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #F7F7F7;
+  font-size: 24px;
+}
+
+/* Sizing for submit button */
+
+#submit {
+  width: 200px;
+  height: 50px;
+  margin-top: 10px;
+}

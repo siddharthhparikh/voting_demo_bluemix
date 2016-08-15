@@ -1,0 +1,24 @@
+extend layout
+block content
+  //
+    Manager view to approve and decline user account requests requests.
+  script(src='/javascripts/manager.js')
+  link(rel='stylesheet', href='/stylesheets/manager.css')
+  //
+    Green title bar.
+  #header
+    h1(id='title')= title
+  //
+    Main content block. Displays a table of all user requests.
+  #table
+    table(id='request-table')
+      tr(id='request-header')
+        th Name
+        th Email address
+        th Organization
+        th Date issued
+        th Privilege
+        th Votes
+        th Approval
+    
+    

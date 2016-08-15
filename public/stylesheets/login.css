@@ -1,0 +1,84 @@
+/* Login header */
+
+#content-header {
+  width: 25%;
+  height: auto;
+
+  padding-bottom: 5px;
+
+  text-align: left; 
+}
+
+/* Sizing for content block */
+
+#content-block {
+  width: 21%;
+  height: auto;
+
+  margin-top: 15px;
+  padding: 0px 25px;
+}
+
+.info-box {
+  height: 345px;
+}
+
+.info-box p {
+  text-align: left;
+  margin: 5px 0px 5px 15px;
+}
+
+#open-register {
+  cursor: pointer;
+  float: right;
+  font-size: 32px;
+  margin-right: 89px;
+}
+
+#open-register:hover {
+  color: #F7F7F7;
+}
+
+/* Submit button sizing */
+
+#submit {
+  display: block;
+
+  font-size: 26px;
+  height: 50px;
+}
+
+#error-msg {
+  color: #FF0000;
+}
+
+#register-user {
+  margin-top: 25px;
+  width: 150px;
+}
+
+#manage {
+  width: 100px;
+}
+
+/* Styling for the loading splash screen which is displayed at the launch of the app */
+#loading-screen {
+  width: 450px;
+  height: 350px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 2px solid #00C26A;
+  border-radius: 10px;
+  margin: 100px auto 0px auto;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.loading-msg{
+  color: #313131;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 30px 0px 10px 0px;
+}
+
+
+
+
