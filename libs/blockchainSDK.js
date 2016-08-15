@@ -127,9 +127,8 @@ if (fs.existsSync("us.blockchain.ibm.com.cert")) {
             // Enroll the WebAppAdmin member with the certificate authority using
             // the one time password hard coded inside the membersrvc.yaml.
             WebAppAdmin.enroll(pwd, function (err, crypto) {
-                console.log('enrolling user \'%s\' with secret \'%s\' as registrar...', "WebAppAdmin", pwd);
                 if (err) return console.log('Error: failed to enroll user: %s', err);
-
+                console.log('enrolling user \'%s\' with secret \'%s\' as registrar...', "WebAppAdmin", pwd);
                 console.log('successfully enrolled user \'%s\'!', "WebAppAdmin");
                 chain.setRegistrar(WebAppAdmin);
 
