@@ -83,8 +83,6 @@ function myRegisterUser(user, role, cb) {
             console.log(user)
             var registrationRequest = {
                 enrollmentID: user,
-                account: "bank_a",
-                affiliation: "00001"
             };
             console.log(registrationRequest);
             usr.register(registrationRequest, function (err, enrollsecret) {
