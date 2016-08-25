@@ -3,7 +3,7 @@
  * 
  * provides functions for interacting with chaincode SDK
  */
-process.env.GOPATH = __dirname;   //set the gopath to current dir and place chaincode inside src folder
+    //set the gopath to current dir and place chaincode inside src folder
 
 var hfc = require('hfc');
 var fs = require('fs');
